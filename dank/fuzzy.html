@@ -1,0 +1,697 @@
+<script
+	async=""
+	src="https://www.googletagmanager.com/gtag/js?id=UA-89595129-1"
+></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag("js", new Date());
+	gtag("config", "UA-89595129-1");
+</script>
+<body>
+	<input id="search" placeholder="Search" />
+	<table id="itemstable"></table>
+</body>
+<script>
+	const items = [
+		{
+			name: "New Player Pack",
+			id: "newplayerpack",
+			image: "https://cdn.discordapp.com/emojis/873172443529891871.png",
+		},
+		{
+			name: "Anti-Rob Pack",
+			id: "antirobpack",
+			image: "https://cdn.discordapp.com/emojis/873172443462791200.png",
+		},
+		{
+			name: "Grind Pack",
+			id: "grindpack",
+			image: "https://cdn.discordapp.com/emojis/873172443685064744.png",
+		},
+		{
+			name: "Pink Phallic Object",
+			id: "pinkphallicobject",
+			image: "https://cdn.discordapp.com/emojis/834192945019617280.png",
+		},
+		{
+			name: "Cell Phone",
+			id: "phone",
+			image: "https://cdn.discordapp.com/emojis/830509316632346625.png",
+		},
+		{
+			name: "Padlock",
+			id: "padlock",
+			image: "https://cdn.discordapp.com/emojis/830509316900651059.png",
+		},
+		{
+			name: "Laptop",
+			id: "laptop",
+			image: "https://cdn.discordapp.com/emojis/830509316674813974.png",
+		},
+		{
+			name: "Box of Sand",
+			id: "sand",
+			image: "https://cdn.discordapp.com/emojis/830509316901175366.png",
+		},
+		{
+			name: "Apple",
+			id: "apple",
+			image: "https://cdn.discordapp.com/emojis/714980848692101130.png",
+		},
+		{
+			name: "Landmine",
+			id: "landmine",
+			image: "https://cdn.discordapp.com/emojis/573151813130518548.png",
+		},
+		{
+			name: "Fake ID",
+			id: "fakeid",
+			image: "https://cdn.discordapp.com/emojis/573151946911776798.png",
+		},
+		{
+			name: "Alcohol",
+			id: "alcohol",
+			image: "https://cdn.discordapp.com/emojis/709406795097047090.png",
+		},
+		{
+			name: "Lucky Horseshoe",
+			id: "horseshoe",
+			image: "https://cdn.discordapp.com/attachments/693517202879414312/813911606907240448/horseshoe.png",
+		},
+		{
+			name: "Fidget Spinner",
+			id: "spinner",
+			image: "https://cdn.discordapp.com/emojis/573150030030962699.png",
+		},
+		{
+			name: "Shovel",
+			id: "shovel",
+			image: "https://cdn.discordapp.com/emojis/842779232819478619.png",
+		},
+		{
+			name: "Fishing Pole",
+			id: "fishingpole",
+			image: "https://cdn.discordapp.com/emojis/714998788397465732.png",
+		},
+		{
+			name: "Hunting Rifle",
+			id: "huntingrifle",
+			image: "https://cdn.discordapp.com/emojis/714543607947722822.png",
+		},
+		{
+			name: "Coin Bomb",
+			id: "coinbomb",
+			image: "https://cdn.discordapp.com/emojis/688456543372312594.png",
+		},
+		{
+			name: "Life Saver",
+			id: "lifesaver",
+			image: "https://cdn.discordapp.com/emojis/573151706641203210.png",
+		},
+		{
+			name: "Tidepod",
+			id: "tidepod",
+			image: "https://cdn.discordapp.com/emojis/573149030951944202.png",
+		},
+		{
+			name: "Robbers Wishlist",
+			id: "wishlist",
+			image: "https://cdn.discordapp.com/emojis/723641465615548447.png",
+		},
+		{
+			name: "Shredded Cheese",
+			id: "cheese",
+			image: "https://cdn.discordapp.com/emojis/830509316933943307.png",
+		},
+		{
+			name: "Rare Pepe",
+			id: "pepe",
+			image: "https://cdn.discordapp.com/emojis/668945671427981312.gif",
+		},
+		{
+			name: "Pizza Slice",
+			id: "pizza",
+			image: "https://cdn.discordapp.com/attachments/693517202879414312/788070266579189790/pizza-export2.png",
+		},
+		{
+			name: "Pepe Coin",
+			id: "pepecoin",
+			image: "https://cdn.discordapp.com/emojis/718138332982280272.gif",
+		},
+		{
+			name: "Pepe Medal",
+			id: "pepemedal",
+			image: "https://cdn.discordapp.com/emojis/716848179022397462.gif",
+		},
+		{
+			name: "Pepe Trophy",
+			id: "pepetrophy",
+			image: "https://cdn.discordapp.com/emojis/718136428219072662.gif",
+		},
+		{
+			name: "Pepe Crown",
+			id: "pepecrown",
+			image: "https://cdn.discordapp.com/emojis/834862725120917544.png",
+		},
+		{
+			name: "Aetheryx' Flower",
+			id: "aetheryxflower",
+			image: "https://cdn.discordapp.com/emojis/834800790605791232.png",
+		},
+		{
+			name: "Literally Karen",
+			id: "karen",
+			image: "https://cdn.discordapp.com/emojis/860196324762452028.png",
+		},
+		{
+			name: "Melmsie's Beard",
+			id: "melmsiebeard",
+			image: "https://cdn.discordapp.com/emojis/834815537921916938.png",
+		},
+		{
+			name: "Badosz's Card",
+			id: "badoszcard",
+			image: "https://cdn.discordapp.com/emojis/869294028385038354.gif",
+		},
+		{
+			name: "Snowball",
+			id: "snowball",
+			image: "https://cdn.discordapp.com/emojis/573150143524765699.png",
+		},
+		{
+			name: "Santa's Hat",
+			id: "santashat",
+			image: "https://cdn.discordapp.com/emojis/573150240954253352.png",
+		},
+		{
+			name: "Friend's Gift",
+			id: "gift",
+			image: "https://cdn.discordapp.com/attachments/693517202879414312/784506168730976305/present.png",
+		},
+		{
+			name: "Winning Lottery Ticket",
+			id: "lotterywinner",
+			image: "https://cdn.discordapp.com/emojis/828630267983298580.png",
+		},
+		{
+			name: "Bolt Cutters",
+			id: "cutters",
+			image: "https://cdn.discordapp.com/emojis/831023529255632898.png",
+		},
+		{
+			name: "Jacky o' Lanty",
+			id: "jacky",
+			image: "https://cdn.discordapp.com/emojis/758662115841802271.png",
+		},
+		{
+			name: "Candy",
+			id: "candy",
+			image: "https://cdn.discordapp.com/emojis/792397132828114965.png",
+		},
+		{
+			name: "Blob",
+			id: "blob",
+			image: "https://cdn.discordapp.com/emojis/639826478866890773.gif",
+		},
+		{
+			name: "Reversal Card",
+			id: "reversal",
+			image: "https://cdn.discordapp.com/emojis/573150370579087360.png",
+		},
+		{
+			name: "Odd Eye",
+			id: "eye",
+			image: "https://cdn.discordapp.com/emojis/787964747848089642.gif",
+		},
+		{
+			name: "Cupid's Big Toe",
+			id: "cupidsbigtoe",
+			image: "https://cdn.discordapp.com/emojis/718136880163586169.png",
+		},
+		{
+			name: "Chill Pill",
+			id: "chillpill",
+			image: "https://cdn.discordapp.com/emojis/716825781908537395.png",
+		},
+		{
+			name: "Fool's Notif",
+			id: "fool",
+			image: "https://cdn.discordapp.com/emojis/826974895295692840.png",
+		},
+		{
+			name: "Bank Note",
+			id: "banknote",
+			image: "https://cdn.discordapp.com/emojis/830509316888985621.png",
+		},
+		{
+			name: "Blue Phallic Object",
+			id: "bluephallicobject",
+			image: "https://cdn.discordapp.com/emojis/834192945124474983.png",
+		},
+		{
+			name: "Purple Phallic Object",
+			id: "purplephallicobject",
+			image: "https://cdn.discordapp.com/emojis/834192945334452244.png",
+		},
+		{
+			name: "Orange Phallic Object",
+			id: "orangephallicobject",
+			image: "https://cdn.discordapp.com/emojis/834192945132601426.png",
+		},
+		{
+			name: "Golden Phallic Object",
+			id: "goldenphallicobject",
+			image: "https://cdn.discordapp.com/emojis/834192944956702746.png",
+		},
+		{
+			name: "Multi Colored Phallic Object",
+			id: "multiphallicobject",
+			image: "https://cdn.discordapp.com/emojis/841123648911966219.gif",
+		},
+		{
+			name: "Pepe Statue",
+			id: "pepestatue",
+			image: "https://cdn.discordapp.com/emojis/834978069629894663.png",
+		},
+		{
+			name: "Gift Box",
+			id: "giftbox",
+			image: "https://cdn.discordapp.com/attachments/693517202879414312/784506168730976305/present.png",
+		},
+		{
+			name: "Daily Box",
+			id: "daily",
+			image: "https://cdn.discordapp.com/emojis/861390900219478037.gif",
+		},
+		{
+			name: "Normie Box",
+			id: "normie",
+			image: "https://cdn.discordapp.com/emojis/861390901405679626.gif?",
+		},
+		{
+			name: "Meme Box",
+			id: "meme",
+			image: "https://cdn.discordapp.com/emojis/861390901300953118.gif",
+		},
+		{
+			name: "Dank Box",
+			id: "dank",
+			image: "https://cdn.discordapp.com/emojis/861390901049425950.gif",
+		},
+		{
+			name: "God Box",
+			id: "god",
+			image: "https://cdn.discordapp.com/emojis/861390900688977950.gif",
+		},
+		{
+			name: "Motivational Poster",
+			id: "poster",
+			image: "https://cdn.discordapp.com/emojis/834080273964072995.png",
+		},
+		{
+			name: "Ectoplasm",
+			id: "ectoplasm",
+			image: "https://cdn.discordapp.com/emojis/834080273889099796.png",
+		},
+		{
+			name: "Used Diaper",
+			id: "diaper",
+			image: "https://cdn.discordapp.com/emojis/834080273947295764.png",
+		},
+		{
+			name: "Like Button",
+			id: "likebutton",
+			image: "https://cdn.discordapp.com/emojis/834080273922523196.png",
+		},
+		{
+			name: "Crunchy Taco",
+			id: "taco",
+			image: "https://cdn.discordapp.com/emojis/834128399551299624.png",
+		},
+		{
+			name: "Tip Jar",
+			id: "tipjar",
+			image: "https://cdn.discordapp.com/emojis/834080273926717471.png",
+		},
+		{
+			name: "A plus",
+			id: "aplus",
+			image: "https://cdn.discordapp.com/emojis/834080273930387486.png",
+		},
+		{
+			name: "Police Badge",
+			id: "policebadge",
+			image: "https://cdn.discordapp.com/emojis/834080273918197810.png",
+		},
+		{
+			name: "Binary",
+			id: "binary",
+			image: "https://cdn.discordapp.com/emojis/834080273896833074.png",
+		},
+		{
+			name: "Stack of Cash",
+			id: "cash",
+			image: "https://cdn.discordapp.com/emojis/862774540895125584.png",
+		},
+		{
+			name: "Beaker of sus fluid",
+			id: "beaker",
+			image: "https://cdn.discordapp.com/emojis/834080273918197811.png",
+		},
+		{
+			name: "Santa's Bag",
+			id: "santasbag",
+			image: "https://cdn.discordapp.com/emojis/862415055622635560.png",
+		},
+		{
+			name: "Ammo",
+			id: "ammo",
+			image: "https://cdn.discordapp.com/emojis/834080273964073035.png",
+		},
+		{
+			name: "Fishing Bait",
+			id: "bait",
+			image: "https://cdn.discordapp.com/emojis/834080273951883305.png",
+		},
+		{
+			name: "Pet Collar",
+			id: "collar",
+			image: "https://cdn.discordapp.com/emojis/834080273951883304.png",
+		},
+		{
+			name: "Ban Hammer",
+			id: "banhammer",
+			image: "https://cdn.discordapp.com/emojis/834080273942577242.png",
+		},
+		{
+			name: "Vaccine",
+			id: "vaccine",
+			image: "https://cdn.discordapp.com/emojis/834080273981243412.png",
+		},
+		{
+			name: "Stonk Machine",
+			id: "stonkmachine",
+			image: "https://cdn.discordapp.com/emojis/834080273796694057.png",
+		},
+		{
+			name: "Meme pills",
+			id: "memepills",
+			image: "https://cdn.discordapp.com/emojis/834080273804689409.png",
+		},
+		{
+			name: "Energy Drink",
+			id: "energydrink",
+			image: "https://cdn.discordapp.com/emojis/834080273909284924.png",
+		},
+		{
+			name: "Bottle of Whiskey",
+			id: "whiskey",
+			image: "https://cdn.discordapp.com/emojis/834080273922523197.png",
+		},
+		{
+			name: "Robbers Mask",
+			id: "robbersmask",
+			image: "https://cdn.discordapp.com/emojis/834080273889099797.png",
+		},
+		{
+			name: "Baby",
+			id: "baby",
+			image: "https://cdn.discordapp.com/emojis/834080273942577192.png",
+		},
+		{
+			name: "Law Degree",
+			id: "lawdegree",
+			image: "https://cdn.discordapp.com/emojis/834080273963548733.png",
+		},
+		{
+			name: "Shop Coupon",
+			id: "coupon",
+			image: "https://cdn.discordapp.com/emojis/834080273892114482.png",
+		},
+		{
+			name: "Musical Note",
+			id: "note",
+			image: "https://cdn.discordapp.com/emojis/834080273892376686.png",
+		},
+		{
+			name: "Trash",
+			id: "trash",
+			image: "https://cdn.discordapp.com/emojis/834091084346949652.png",
+		},
+		{
+			name: "Garbage",
+			id: "garbage",
+			image: "https://cdn.discordapp.com/emojis/834091084392693760.png",
+		},
+		{
+			name: "Junk",
+			id: "junk",
+			image: "https://cdn.discordapp.com/emojis/834091084359139378.png",
+		},
+		{
+			name: "Cookie",
+			id: "cookie",
+			image: "https://cdn.discordapp.com/emojis/573152241289003036.png",
+		},
+		{
+			name: "Fresh Bread",
+			id: "bread",
+			image: "https://cdn.discordapp.com/emojis/716848527149629490.png",
+		},
+		{
+			name: "Potato ☭",
+			id: "potato",
+			image: "https://cdn.discordapp.com/emojis/834080273913872384.png",
+		},
+		{
+			name: "Corncob",
+			id: "corncob",
+			image: "https://cdn.discordapp.com/emojis/834080273942839326.png",
+		},
+		{
+			name: "Corndog",
+			id: "corndog",
+			image: "https://cdn.discordapp.com/emojis/834080273796694056.png",
+		},
+		{
+			name: "Worm",
+			id: "worm",
+			image: "https://cdn.discordapp.com/emojis/864261394920898600.png",
+		},
+		{
+			name: "Ant",
+			id: "ant",
+			image: "https://cdn.discordapp.com/emojis/864220608865763378.png",
+		},
+		{
+			name: "Stickbug",
+			id: "stickbug",
+			image: "https://cdn.discordapp.com/emojis/864568819795755038.gif",
+		},
+		{
+			name: "Ladybug",
+			id: "ladybug",
+			image: "https://cdn.discordapp.com/emojis/863198415822389268.png",
+		},
+		{
+			name: "Spider",
+			id: "spider",
+			image: "https://cdn.discordapp.com/emojis/864261394944884746.png",
+		},
+		{
+			name: "Skunk",
+			id: "skunk",
+			image: "https://cdn.discordapp.com/emojis/861390875992522792.png",
+		},
+		{
+			name: "Rabbit",
+			id: "rabbit",
+			image: "https://cdn.discordapp.com/emojis/860665246875254784.png",
+		},
+		{
+			name: "Duck",
+			id: "duck",
+			image: "https://cdn.discordapp.com/emojis/573152043125178368.png",
+		},
+		{
+			name: "Deer",
+			id: "deer",
+			image: "https://cdn.discordapp.com/emojis/832746231100473384.png",
+		},
+		{
+			name: "Boar",
+			id: "boar",
+			image: "https://cdn.discordapp.com/emojis/861584585656762398.png",
+		},
+		{
+			name: "Dragon",
+			id: "dragon",
+			image: "https://cdn.discordapp.com/emojis/861390869696741396.png",
+		},
+		{
+			name: "Seaweed",
+			id: "seaweed",
+			image: "https://cdn.discordapp.com/emojis/841405708103581726.png",
+		},
+		{
+			name: "Common Fish",
+			id: "fish",
+			image: "https://cdn.discordapp.com/emojis/714980893999104051.png",
+		},
+		{
+			name: "Rare Fish",
+			id: "rarefish",
+			image: "https://cdn.discordapp.com/emojis/714980949149876316.png",
+		},
+		{
+			name: "Exotic Fish",
+			id: "exoticfish",
+			image: "https://cdn.discordapp.com/emojis/714981026245378088.png",
+		},
+		{
+			name: "Jelly Fish",
+			id: "jellyfish",
+			image: "https://cdn.discordapp.com/emojis/841405707739463708.png",
+		},
+		{
+			name: "Legendary Fish",
+			id: "legendaryfish",
+			image: "https://cdn.discordapp.com/emojis/714981071548186684.png",
+		},
+		{
+			name: "Kraken",
+			id: "kraken",
+			image: "https://cdn.discordapp.com/emojis/860228238956429313.png",
+		},
+	];
+
+	function similarityBetween(s1, s2) {
+		let longer = s1;
+		let shorter = s2;
+		if (s1.length < s2.length) {
+			longer = s2;
+			shorter = s1;
+		}
+		const longerLength = longer.length;
+		if (longerLength === 0) {
+			return 1.0;
+		}
+		return (
+			(longerLength - editDistance(longer, shorter)) /
+			parseFloat(longerLength)
+		);
+	}
+
+	function editDistance(s1, s2) {
+		s1 = s1.toLowerCase();
+		s2 = s2.toLowerCase();
+
+		const costs = [];
+		for (let i = 0; i <= s1.length; i++) {
+			let lastValue = i;
+			for (let j = 0; j <= s2.length; j++) {
+				if (i === 0) {
+					costs[j] = j;
+				} else {
+					if (j > 0) {
+						let newValue = costs[j - 1];
+						if (s1.charAt(i - 1) !== s2.charAt(j - 1)) {
+							newValue =
+								Math.min(
+									Math.min(newValue, lastValue),
+									costs[j]
+								) + 1;
+						}
+						costs[j - 1] = lastValue;
+						lastValue = newValue;
+					}
+				}
+			}
+			if (i > 0) {
+				costs[s2.length] = lastValue;
+			}
+		}
+		return costs[s2.length];
+	}
+
+	function search(query) {
+		query = query.toLowerCase();
+
+		const target = items;
+		const candidates = [];
+
+		for (const item in target) {
+			const candidate = {
+				item: target[item],
+				similarity: 0,
+			};
+
+			if (candidate.item.id.toLowerCase() === query) {
+				candidate.similarity = 1;
+			} else if (candidate.item.name.toLowerCase() === query) {
+				candidate.similarity = 0.999;
+			} else if (
+				candidate.item.name.toLowerCase().includes(" " + query + " ") ||
+				candidate.item.id.includes(" " + query + " ")
+			) {
+				candidate.similarity = 0.998;
+			} else if (
+				candidate.item.name.toLowerCase().includes(query + " ") ||
+				candidate.item.id.includes(query + " ")
+			) {
+				candidate.similarity = 0.997;
+			} else if (
+				candidate.item.name.toLowerCase().includes(" " + query) ||
+				candidate.item.id.includes(" " + query)
+			) {
+				candidate.similarity = 0.997;
+			} else if (
+				candidate.item.name.toLowerCase().includes(query) ||
+				candidate.item.id.includes(query)
+			) {
+				candidate.similarity = 0.996;
+			} else {
+				const similarity = similarityBetween(
+					query,
+					candidate.item.name
+				);
+				candidate.similarity = similarity;
+			}
+
+			candidates.push(candidate);
+		}
+		return candidates.length
+			? candidates.sort((a, b) => b.similarity - a.similarity)
+			: false;
+	}
+
+	function doTable(item) {
+		const table = document.getElementById("itemstable");
+		const result = search(item);
+
+		table.innerHTML = "";
+
+		result.forEach((item, i) => {
+			const row = table.insertRow(-1);
+			const image = row.insertCell(0);
+			const name = row.insertCell(-1);
+			const value = row.insertCell(-1);
+			name.innerHTML = item.item.name;
+			value.innerHTML = item.similarity.toFixed(4);
+			image.innerHTML = `<img width=20 src="${item.item.image}"/>`;
+		});
+	}
+
+	window.onload = function () {
+		const inputBox = document.getElementById("search");
+		doTable("");
+
+		inputBox.addEventListener("input", (event) => {
+			const item = event.target.value;
+			doTable(item);
+		});
+	};
+</script>
