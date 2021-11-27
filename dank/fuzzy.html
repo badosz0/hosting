@@ -15,728 +15,140 @@
 	<table id="itemstable"></table>
 </body>
 <script>
-	const items = [
-		{
-			name: "New Player Pack",
-			image: "https://cdn.discordapp.com/emojis/873172443529891871.png",
-			id: "newplayerpack",
-		},
-		{
-			name: "Anti-Rob Pack",
-			image: "https://cdn.discordapp.com/emojis/873172443462791200.png",
-			id: "antirobpack",
-		},
-		{
-			name: "Grind Pack",
-			image: "https://cdn.discordapp.com/emojis/873172443685064744.png",
-			id: "grindpack",
-		},
-		{
-			name: "Pink Phallic Object",
-			image: "https://cdn.discordapp.com/emojis/834192945019617280.png",
-			id: "pinkphallicobject",
-		},
-		{
-			name: "Cell Phone",
-			image: "https://cdn.discordapp.com/emojis/830509316632346625.png",
-			id: "phone",
-		},
-		{
-			name: "Padlock",
-			image: "https://cdn.discordapp.com/emojis/830509316900651059.png",
-			id: "padlock",
-		},
-		{
-			name: "Laptop",
-			image: "https://cdn.discordapp.com/emojis/830509316674813974.png",
-			id: "laptop",
-		},
-		{
-			name: "Box of Sand",
-			image: "https://cdn.discordapp.com/emojis/830509316901175366.png",
-			id: "sand",
-		},
-		{
-			name: "Apple",
-			image: "https://cdn.discordapp.com/emojis/887000049266069575.png",
-			id: "apple",
-		},
-		{
-			name: "Landmine",
-			image: "https://cdn.discordapp.com/emojis/887000049354145792.png",
-			id: "landmine",
-		},
-		{
-			name: "Fake ID",
-			image: "https://cdn.discordapp.com/emojis/573151946911776798.png",
-			id: "fakeid",
-		},
-		{
-			name: "Alcohol",
-			image: "https://cdn.discordapp.com/emojis/887000049555501127.png",
-			id: "alcohol",
-		},
-		{
-			name: "Lucky Horseshoe",
-			image: "https://cdn.discordapp.com/attachments/693517202879414312/813911606907240448/horseshoe.png",
-			id: "horseshoe",
-		},
-		{
-			name: "Fidget Spinner",
-			image: "https://cdn.discordapp.com/emojis/573150030030962699.png",
-			id: "spinner",
-		},
-		{
-			name: "Shovel",
-			image: "https://cdn.discordapp.com/emojis/842779232819478619.png",
-			id: "shovel",
-		},
-		{
-			name: "Fishing Pole",
-			image: "https://cdn.discordapp.com/emojis/714998788397465732.png",
-			id: "fishingpole",
-		},
-		{
-			name: "Hunting Rifle",
-			image: "https://cdn.discordapp.com/emojis/714543607947722822.png",
-			id: "huntingrifle",
-		},
-		{
-			name: "Coin Bomb",
-			image: "https://cdn.discordapp.com/emojis/688456543372312594.png",
-			id: "coinbomb",
-		},
-		{
-			name: "Life Saver",
-			image: "https://cdn.discordapp.com/emojis/573151706641203210.png",
-			id: "lifesaver",
-		},
-		{
-			name: "Tidepod",
-			image: "https://cdn.discordapp.com/emojis/887000049740030032.png",
-			id: "tidepod",
-		},
-		{
-			name: "Robbers Wishlist",
-			image: "https://cdn.discordapp.com/emojis/723641465615548447.png",
-			id: "wishlist",
-		},
-		{
-			name: "Shredded Cheese",
-			image: "https://cdn.discordapp.com/emojis/830509316933943307.png",
-			id: "cheese",
-		},
-		{
-			name: "Rare Pepe",
-			image: "https://cdn.discordapp.com/emojis/668945671427981312.gif",
-			id: "pepe",
-		},
-		{
-			name: "Pizza Slice",
-			image: "https://cdn.discordapp.com/attachments/693517202879414312/788070266579189790/pizza-export2.png",
-			id: "pizza",
-		},
-		{
-			name: "Engagement Ring",
-			image: "https://cdn.discordapp.com/emojis/862369027984064552.png",
-			id: "ring",
-		},
-		{
-			name: "Pepe Coin",
-			image: "https://cdn.discordapp.com/emojis/718138332982280272.gif",
-			id: "pepecoin",
-		},
-		{
-			name: "Pepe Medal",
-			image: "https://cdn.discordapp.com/emojis/716848179022397462.gif",
-			id: "pepemedal",
-		},
-		{
-			name: "Pepe Trophy",
-			image: "https://cdn.discordapp.com/emojis/718136428219072662.gif",
-			id: "pepetrophy",
-		},
-		{
-			name: "Pepe Crown",
-			image: "https://cdn.discordapp.com/emojis/834862725120917544.png",
-			id: "pepecrown",
-		},
-		{
-			name: "Fart In A Bottle",
-			image: "https://cdn.discordapp.com/emojis/860285654009511936.png",
-			id: "fartinabottle",
-		},
-		{
-			name: "Pepe Ribbon",
-			image: "https://cdn.discordapp.com/emojis/890646381482614824.png",
-			id: "peperibbon",
-		},
-		{
-			name: "Pepe Sus",
-			image: "https://cdn.discordapp.com/emojis/890646381189009438.png",
-			id: "pepesus",
-		},
-		{
-			name: "Credit Card",
-			image: "https://cdn.discordapp.com/emojis/892546328406663168.png",
-			id: "creditcard",
-		},
-		{
-			name: "Aetheryx' Flower",
-			image: "https://cdn.discordapp.com/emojis/834800790605791232.png",
-			id: "aetheryxflower",
-		},
-		{
-			name: "Literally Karen",
-			image: "https://cdn.discordapp.com/emojis/860196324762452028.png",
-			id: "karen",
-		},
-		{
-			name: "Melmsie's Beard",
-			image: "https://cdn.discordapp.com/emojis/834815537921916938.png",
-			id: "melmsiebeard",
-		},
-		{
-			name: "Badosz's Card",
-			image: "https://cdn.discordapp.com/emojis/869294028385038354.gif",
-			id: "badoszcard",
-		},
-		{
-			name: "Winning Lottery Ticket",
-			image: "https://cdn.discordapp.com/emojis/828630267983298580.png",
-			id: "lotterywinner",
-		},
-		{
-			name: "Bolt Cutters",
-			image: "https://cdn.discordapp.com/emojis/831023529255632898.png",
-			id: "cutters",
-		},
-		{
-			name: "Reversal Card",
-			image: "https://cdn.discordapp.com/emojis/573150370579087360.png",
-			id: "reversal",
-		},
-		{
-			name: "Odd Eye",
-			image: "https://cdn.discordapp.com/emojis/787964747848089642.gif",
-			id: "eye",
-		},
-		{
-			name: "Chill Pill",
-			image: "https://cdn.discordapp.com/emojis/716825781908537395.png",
-			id: "chillpill",
-		},
-		{
-			name: "Bank Note",
-			image: "https://cdn.discordapp.com/emojis/830509316888985621.png",
-			id: "banknote",
-		},
-		{
-			name: "Blue Phallic Object",
-			image: "https://cdn.discordapp.com/emojis/834192945124474983.png",
-			id: "bluephallicobject",
-		},
-		{
-			name: "Purple Phallic Object",
-			image: "https://cdn.discordapp.com/emojis/834192945334452244.png",
-			id: "purplephallicobject",
-		},
-		{
-			name: "Orange Phallic Object",
-			image: "https://cdn.discordapp.com/emojis/834192945132601426.png",
-			id: "orangephallicobject",
-		},
-		{
-			name: "Golden Phallic Object",
-			image: "https://cdn.discordapp.com/emojis/834192944956702746.png",
-			id: "goldenphallicobject",
-		},
-		{
-			name: "Multi Colored Phallic Object",
-			image: "https://cdn.discordapp.com/emojis/841123648911966219.gif",
-			id: "multiphallicobject",
-		},
-		{
-			name: "Pepe Statue",
-			image: "https://cdn.discordapp.com/emojis/834978069629894663.png",
-			id: "pepestatue",
-		},
-		{
-			name: "School Urinal",
-			image: "https://cdn.discordapp.com/emojis/889266191808471114.png",
-			id: "urinal",
-		},
-		{
-			name: "Berries and Cream",
-			image: "https://cdn.discordapp.com/emojis/890365752534761472.png",
-			id: "berriesandcream",
-		},
-		{
-			name: "Fool's Notif",
-			image: "https://cdn.discordapp.com/emojis/826974895295692840.png",
-			id: "fool",
-		},
-		{
-			name: "Snowball",
-			image: "https://cdn.discordapp.com/emojis/573150143524765699.png",
-			id: "snowball",
-		},
-		{
-			name: "Santa's Hat",
-			image: "https://cdn.discordapp.com/emojis/573150240954253352.png",
-			id: "santashat",
-		},
-		{
-			name: "Friend's Gift",
-			image: "https://cdn.discordapp.com/attachments/693517202879414312/784506168730976305/present.png",
-			id: "gift",
-		},
-		{
-			name: "Jacky o' Lanty",
-			image: "https://cdn.discordapp.com/emojis/758662115841802271.png",
-			id: "jacky",
-		},
-		{
-			name: "Candy",
-			image: "https://cdn.discordapp.com/emojis/792397132828114965.png",
-			id: "candy",
-		},
-		{
-			name: "Blob",
-			image: "https://cdn.discordapp.com/emojis/639826478866890773.gif",
-			id: "blob",
-		},
-		{
-			name: "Cupid's Big Toe",
-			image: "https://cdn.discordapp.com/emojis/718136880163586169.png",
-			id: "cupidsbigtoe",
-		},
-		{
-			name: "Gift Box",
-			image: "https://cdn.discordapp.com/attachments/693517202879414312/784506168730976305/present.png",
-			id: "giftbox",
-		},
-		{
-			name: "Daily Box",
-			image: "https://cdn.discordapp.com/emojis/861390900219478037.gif",
-			id: "daily",
-		},
-		{
-			name: "Wedding Gift",
-			image: "https://cdn.discordapp.com/emojis/877566903516790855.png",
-			id: "weddinggift",
-		},
-		{
-			name: "Normie Box",
-			image: "https://cdn.discordapp.com/emojis/861390901405679626.gif?",
-			id: "normie",
-		},
-		{
-			name: "Meme Box",
-			image: "https://cdn.discordapp.com/emojis/861390901300953118.gif",
-			id: "meme",
-		},
-		{
-			name: "Dank Box",
-			image: "https://cdn.discordapp.com/emojis/861390901049425950.gif",
-			id: "dank",
-		},
-		{
-			name: "God Box",
-			image: "https://cdn.discordapp.com/emojis/861390900688977950.gif",
-			id: "god",
-		},
-		{
-			name: "Patreon Box",
-			image: "https://cdn.discordapp.com/emojis/892171107845677066.gif",
-			id: "patreon",
-		},
-		{
-			name: "Motivational Poster",
-			image: "https://cdn.discordapp.com/emojis/834080273964072995.png",
-			id: "poster",
-		},
-		{
-			name: "Ectoplasm",
-			image: "https://cdn.discordapp.com/emojis/834080273889099796.png",
-			id: "ectoplasm",
-		},
-		{
-			name: "Used Diaper",
-			image: "https://cdn.discordapp.com/emojis/834080273947295764.png",
-			id: "diaper",
-		},
-		{
-			name: "Like Button",
-			image: "https://cdn.discordapp.com/emojis/834080273922523196.png",
-			id: "likebutton",
-		},
-		{
-			name: "Crunchy Taco",
-			image: "https://cdn.discordapp.com/emojis/834128399551299624.png",
-			id: "taco",
-		},
-		{
-			name: "Tip Jar",
-			image: "https://cdn.discordapp.com/emojis/834080273926717471.png",
-			id: "tipjar",
-		},
-		{
-			name: "A plus",
-			image: "https://cdn.discordapp.com/emojis/834080273930387486.png",
-			id: "aplus",
-		},
-		{
-			name: "Police Badge",
-			image: "https://cdn.discordapp.com/emojis/834080273918197810.png",
-			id: "policebadge",
-		},
-		{
-			name: "Binary",
-			image: "https://cdn.discordapp.com/emojis/834080273896833074.png",
-			id: "binary",
-		},
-		{
-			name: "Stack of Cash",
-			image: "https://cdn.discordapp.com/emojis/862774540895125584.png",
-			id: "cash",
-		},
-		{
-			name: "Beaker of sus fluid",
-			image: "https://cdn.discordapp.com/emojis/834080273918197811.png",
-			id: "beaker",
-		},
-		{
-			name: "Santa's Bag",
-			image: "https://cdn.discordapp.com/emojis/862415055622635560.png",
-			id: "santasbag",
-		},
-		{
-			name: "Ammo",
-			image: "https://cdn.discordapp.com/emojis/834080273964073035.png",
-			id: "ammo",
-		},
-		{
-			name: "Fishing Bait",
-			image: "https://cdn.discordapp.com/emojis/834080273951883305.png",
-			id: "bait",
-		},
-		{
-			name: "Pet Collar",
-			image: "https://cdn.discordapp.com/emojis/834080273951883304.png",
-			id: "collar",
-		},
-		{
-			name: "Ban Hammer",
-			image: "https://cdn.discordapp.com/emojis/834080273942577242.png",
-			id: "banhammer",
-		},
-		{
-			name: "Vaccine",
-			image: "https://cdn.discordapp.com/emojis/834080273981243412.png",
-			id: "vaccine",
-		},
-		{
-			name: "Stonk Machine",
-			image: "https://cdn.discordapp.com/emojis/834080273796694057.png",
-			id: "stonkmachine",
-		},
-		{
-			name: "Meme pills",
-			image: "https://cdn.discordapp.com/emojis/834080273804689409.png",
-			id: "memepills",
-		},
-		{
-			name: "Energy Drink",
-			image: "https://cdn.discordapp.com/emojis/834080273909284924.png",
-			id: "energydrink",
-		},
-		{
-			name: "Bottle of Whiskey",
-			image: "https://cdn.discordapp.com/emojis/834080273922523197.png",
-			id: "whiskey",
-		},
-		{
-			name: "Robbers Mask",
-			image: "https://cdn.discordapp.com/emojis/834080273889099797.png",
-			id: "robbersmask",
-		},
-		{
-			name: "Baby",
-			image: "https://cdn.discordapp.com/emojis/834080273942577192.png",
-			id: "baby",
-		},
-		{
-			name: "Law Degree",
-			image: "https://cdn.discordapp.com/emojis/834080273963548733.png",
-			id: "lawdegree",
-		},
-		{
-			name: "Shop Coupon",
-			image: "https://cdn.discordapp.com/emojis/834080273892114482.png",
-			id: "coupon",
-		},
-		{
-			name: "Musical Note",
-			image: "https://cdn.discordapp.com/emojis/834080273892376686.png",
-			id: "note",
-		},
-		{
-			name: "Trash",
-			image: "https://cdn.discordapp.com/emojis/834091084346949652.png",
-			id: "trash",
-		},
-		{
-			name: "Garbage",
-			image: "https://cdn.discordapp.com/emojis/834091084392693760.png",
-			id: "garbage",
-		},
-		{
-			name: "Junk",
-			image: "https://cdn.discordapp.com/emojis/834091084359139378.png",
-			id: "junk",
-		},
-		{
-			name: "Cookie",
-			image: "https://cdn.discordapp.com/emojis/573152241289003036.png",
-			id: "cookie",
-		},
-		{
-			name: "Fresh Bread",
-			image: "https://cdn.discordapp.com/emojis/716848527149629490.png",
-			id: "bread",
-		},
-		{
-			name: "Potato ☭",
-			image: "https://cdn.discordapp.com/emojis/834080273913872384.png",
-			id: "potato",
-		},
-		{
-			name: "Corncob",
-			image: "https://cdn.discordapp.com/emojis/834080273942839326.png",
-			id: "corncob",
-		},
-		{
-			name: "Corndog",
-			image: "https://cdn.discordapp.com/emojis/834080273796694056.png",
-			id: "corndog",
-		},
-		{
-			name: "Worm",
-			image: "https://cdn.discordapp.com/emojis/864261394920898600.png",
-			id: "worm",
-		},
-		{
-			name: "Ant",
-			image: "https://cdn.discordapp.com/emojis/864220608865763378.png",
-			id: "ant",
-		},
-		{
-			name: "Stickbug",
-			image: "https://cdn.discordapp.com/emojis/864568819795755038.gif",
-			id: "stickbug",
-		},
-		{
-			name: "Ladybug",
-			image: "https://cdn.discordapp.com/emojis/863198415822389268.png",
-			id: "ladybug",
-		},
-		{
-			name: "Spider",
-			image: "https://cdn.discordapp.com/emojis/864261394944884746.png",
-			id: "spider",
-		},
-		{
-			name: "Skunk",
-			image: "https://cdn.discordapp.com/emojis/861390875992522792.png",
-			id: "skunk",
-		},
-		{
-			name: "Rabbit",
-			image: "https://cdn.discordapp.com/emojis/860665246875254784.png",
-			id: "rabbit",
-		},
-		{
-			name: "Duck",
-			image: "https://cdn.discordapp.com/emojis/573152043125178368.png",
-			id: "duck",
-		},
-		{
-			name: "Deer",
-			image: "https://cdn.discordapp.com/emojis/832746231100473384.png",
-			id: "deer",
-		},
-		{
-			name: "Boar",
-			image: "https://cdn.discordapp.com/emojis/861584585656762398.png",
-			id: "boar",
-		},
-		{
-			name: "Dragon",
-			image: "https://cdn.discordapp.com/emojis/861390869696741396.png",
-			id: "dragon",
-		},
-		{
-			name: "Seaweed",
-			image: "https://cdn.discordapp.com/emojis/887000050201419787.gif",
-			id: "seaweed",
-		},
-		{
-			name: "Common Fish",
-			image: "https://cdn.discordapp.com/emojis/714980893999104051.png",
-			id: "fish",
-		},
-		{
-			name: "Rare Fish",
-			image: "https://cdn.discordapp.com/emojis/714980949149876316.png",
-			id: "rarefish",
-		},
-		{
-			name: "Exotic Fish",
-			image: "https://cdn.discordapp.com/emojis/714981026245378088.png",
-			id: "exoticfish",
-		},
-		{
-			name: "Jelly Fish",
-			image: "https://cdn.discordapp.com/emojis/841405707739463708.png",
-			id: "jellyfish",
-		},
-		{
-			name: "Legendary Fish",
-			image: "https://cdn.discordapp.com/emojis/714981071548186684.png",
-			id: "legendaryfish",
-		},
-		{
-			name: "Kraken",
-			image: "https://cdn.discordapp.com/emojis/860228238956429313.png",
-			id: "kraken",
-		},
-	];
+	async function main() {
+		const items = await fetch(
+			"https://raw.githubusercontent.com/DankMemer/dankmemer.lol/rewrite/src/data/itemsData.json"
+		).then((r) => r.json());
 
-	function similarityBetween(s1, s2) {
-		let longer = s1;
-		let shorter = s2;
-		if (s1.length < s2.length) {
-			longer = s2;
-			shorter = s1;
+		function similarityBetween(s1, s2) {
+			let longer = s1;
+			let shorter = s2;
+			if (s1.length < s2.length) {
+				longer = s2;
+				shorter = s1;
+			}
+			const longerLength = longer.length;
+			if (longerLength === 0) {
+				return 1.0;
+			}
+			return (
+				(longerLength - editDistance(longer, shorter)) /
+				parseFloat(longerLength)
+			);
 		}
-		const longerLength = longer.length;
-		if (longerLength === 0) {
-			return 1.0;
-		}
-		return (
-			(longerLength - editDistance(longer, shorter)) /
-			parseFloat(longerLength)
-		);
-	}
 
-	function editDistance(s1, s2) {
-		s1 = s1.toLowerCase();
-		s2 = s2.toLowerCase();
+		function editDistance(s1, s2) {
+			s1 = s1.toLowerCase();
+			s2 = s2.toLowerCase();
 
-		const costs = [];
-		for (let i = 0; i <= s1.length; i++) {
-			let lastValue = i;
-			for (let j = 0; j <= s2.length; j++) {
-				if (i === 0) {
-					costs[j] = j;
-				} else {
-					if (j > 0) {
-						let newValue = costs[j - 1];
-						if (s1.charAt(i - 1) !== s2.charAt(j - 1)) {
-							newValue =
-								Math.min(
-									Math.min(newValue, lastValue),
-									costs[j]
-								) + 1;
+			const costs = [];
+			for (let i = 0; i <= s1.length; i++) {
+				let lastValue = i;
+				for (let j = 0; j <= s2.length; j++) {
+					if (i === 0) {
+						costs[j] = j;
+					} else {
+						if (j > 0) {
+							let newValue = costs[j - 1];
+							if (s1.charAt(i - 1) !== s2.charAt(j - 1)) {
+								newValue =
+									Math.min(
+										Math.min(newValue, lastValue),
+										costs[j]
+									) + 1;
+							}
+							costs[j - 1] = lastValue;
+							lastValue = newValue;
 						}
-						costs[j - 1] = lastValue;
-						lastValue = newValue;
 					}
 				}
+				if (i > 0) {
+					costs[s2.length] = lastValue;
+				}
 			}
-			if (i > 0) {
-				costs[s2.length] = lastValue;
-			}
+			return costs[s2.length];
 		}
-		return costs[s2.length];
-	}
 
-	function search(query) {
-		query = query.toLowerCase();
+		function search(query) {
+			query = query.toLowerCase();
 
-		const target = items;
-		const candidates = [];
+			const target = items;
+			const candidates = [];
 
-		for (const item in target) {
-			const candidate = {
-				item: target[item],
-				similarity: 0,
-			};
+			for (const item in target) {
+				const candidate = {
+					item: target[item],
+					similarity: 0,
+				};
 
-			if (candidate.item.id.toLowerCase() === query) {
-				candidate.similarity = 1;
-			} else if (candidate.item.name.toLowerCase() === query) {
-				candidate.similarity = 0.999;
-			} else if (
-				candidate.item.name.toLowerCase().includes(" " + query + " ") ||
-				candidate.item.id.includes(" " + query + " ")
-			) {
-				candidate.similarity = 0.998;
-			} else if (
-				candidate.item.name.toLowerCase().includes(query + " ") ||
-				candidate.item.id.includes(query + " ")
-			) {
-				candidate.similarity = 0.997;
-			} else if (
-				candidate.item.name.toLowerCase().includes(" " + query) ||
-				candidate.item.id.includes(" " + query)
-			) {
-				candidate.similarity = 0.997;
-			} else if (
-				candidate.item.name.toLowerCase().includes(query) ||
-				candidate.item.id.includes(query)
-			) {
-				candidate.similarity = 0.996;
-			} else {
-				const similarity = similarityBetween(
-					query,
+				if (candidate.item.id.toLowerCase() === query) {
+					candidate.similarity = 1;
+				} else if (candidate.item.name.toLowerCase() === query) {
+					candidate.similarity = 0.999;
+				} else if (
 					candidate.item.name
-				);
-				candidate.similarity = similarity;
+						.toLowerCase()
+						.includes(" " + query + " ") ||
+					candidate.item.id.includes(" " + query + " ")
+				) {
+					candidate.similarity = 0.998;
+				} else if (
+					candidate.item.name.toLowerCase().includes(query + " ") ||
+					candidate.item.id.includes(query + " ")
+				) {
+					candidate.similarity = 0.997;
+				} else if (
+					candidate.item.name.toLowerCase().includes(" " + query) ||
+					candidate.item.id.includes(" " + query)
+				) {
+					candidate.similarity = 0.997;
+				} else if (
+					candidate.item.name.toLowerCase().includes(query) ||
+					candidate.item.id.includes(query)
+				) {
+					candidate.similarity = 0.996;
+				} else {
+					const similarity = similarityBetween(
+						query,
+						candidate.item.name
+					);
+					candidate.similarity = similarity;
+				}
+
+				candidates.push(candidate);
 			}
-
-			candidates.push(candidate);
+			return candidates.length
+				? candidates.sort((a, b) => b.similarity - a.similarity)
+				: false;
 		}
-		return candidates.length
-			? candidates.sort((a, b) => b.similarity - a.similarity)
-			: false;
+
+		function doTable(item) {
+			const table = document.getElementById("itemstable");
+			const result = search(item);
+
+			table.innerHTML = "";
+
+			result.forEach((item, i) => {
+				const row = table.insertRow(-1);
+				const image = row.insertCell(0);
+				const name = row.insertCell(-1);
+				const value = row.insertCell(-1);
+				name.innerHTML = item.item.name;
+				value.innerHTML = item.similarity.toFixed(4);
+				image.innerHTML = `<img width=20 src="${item.item.image}"/>`;
+			});
+		}
+
+		window.onload = function () {
+			const inputBox = document.getElementById("search");
+			doTable("");
+
+			inputBox.addEventListener("input", (event) => {
+				const item = event.target.value;
+				doTable(item);
+			});
+		};
 	}
 
-	function doTable(item) {
-		const table = document.getElementById("itemstable");
-		const result = search(item);
-
-		table.innerHTML = "";
-
-		result.forEach((item, i) => {
-			const row = table.insertRow(-1);
-			const image = row.insertCell(0);
-			const name = row.insertCell(-1);
-			const value = row.insertCell(-1);
-			name.innerHTML = item.item.name;
-			value.innerHTML = item.similarity.toFixed(4);
-			image.innerHTML = `<img width=20 src="${item.item.image}"/>`;
-		});
-	}
-
-	window.onload = function () {
-		const inputBox = document.getElementById("search");
-		doTable("");
-
-		inputBox.addEventListener("input", (event) => {
-			const item = event.target.value;
-			doTable(item);
-		});
-	};
+	main();
 </script>
